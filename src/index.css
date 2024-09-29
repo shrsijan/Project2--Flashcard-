@@ -1,0 +1,149 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #242424;
+  color: rgba(2, 3, 4, 0.87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  flex-direction: column; /* Stacks items vertically */
+}
+
+a {
+  font-weight: 500;
+  color: #040407;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #020203;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0; /* Remove default margin */
+}
+
+p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.app {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.flashcard {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin: 60px auto;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 60, 0.5),
+    rgba(0, 206, 209, 0.5)
+  );
+  border: 10px solid rgba(255, 255, 255, 0.8); /* Semi-transparent white border */
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s;
+  color: #000; /* Use black text for contrast */
+  text-align: center;
+  display: flex;
+  align-items: center;    
+  justify-content: center; 
+}
+
+.flashcard:hover {
+  transform: scale(1.1);
+}
+
+.flashcard-text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flashcard-text p {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000; /* Black text for better contrast */
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Optional: light text shadow */
+}
+
+.next-button {
+  background-color: #00BFFF;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.next-button:hover {
+  background-color: #1E90FF;
+  transform: translateY(-2px);
+}
+
+.next-button:active {
+  transform: translateY(0);
+}
+
+.next-icon {
+  font-size: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .next-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/Users/sijanshrestha/Desktop/project2/flashcard/public/nepal.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+}
