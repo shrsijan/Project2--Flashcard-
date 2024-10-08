@@ -4,7 +4,8 @@ Submitted by: **Sijan Shrestha**
 
 This web app: **An example of Flashcard application for learning Nepali**
 
-Time spent: **5** hours spent in total
+Time spent in Project 2: **5** hours spent in total
+Time spent in Project 3: **2** hours spent in total
 
 ## Required Features
 
@@ -27,7 +28,11 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-https://github.com/user-attachments/assets/d89dcfce-b360-4bc9-b45f-185c969e3cea
+
+
+https://github.com/user-attachments/assets/2ef1a356-9f6d-41be-932e-5a8623c91efb
+
+
 
 
 <!-- Replace this with whatever GIF tool you used! -->
