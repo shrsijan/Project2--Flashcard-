@@ -22,31 +22,66 @@ function App() {
   ];
 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [showQuestion, setShowQuestion] = useState(true);
-
-  const totalCards = cards.length;
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [guess, setGuess] = useState('');
+  const [streak, setStreak] = useState(0);
 
   const handleCardClick = () => {
-    setShowQuestion(!showQuestion);
+    setShowAnswer(true);
+  };
+
+  const handleChange = (event) => {
+    setGuess(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const correctAnswer = cards[currentCardIndex].answer;
+    if (guess.toLowerCase() === correctAnswer.toLowerCase()) {
+      alert('Correct!');
+      setStreak(streak + 1);
+    } else {
+      alert(`Incorrect! The correct answer was: ${correctAnswer}`);
+      setStreak(0);
+    }
+    setGuess('');
+    setShowAnswer(true);
   };
 
   const handleNextClick = () => {
-    const randomIndex = Math.floor(Math.random() * totalCards);
-    setCurrentCardIndex(randomIndex);
-    setShowQuestion(true);
+    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
+    setShowAnswer(false);
+  };
+
+  const handlePreviousClick = () => {
+    setCurrentCardIndex((prevIndex) => (prevIndex === 0 ? cards.length - 1 : prevIndex - 1));
+    setShowAnswer(false);
   };
 
   return (
     <div className="app">
-      <h1>Nepali Language Flashcards</h1>
-      <p>Practice basic Nepali words and phrases. Total cards: {totalCards}</p>
+      <h1>Nepali Language Learning Flashcards</h1>
+      <p>Current streak: {streak}</p>
       <Flashcard
-        text={showQuestion ? cards[currentCardIndex].question : cards[currentCardIndex].answer}
+        text={showAnswer ? cards[currentCardIndex].answer : cards[currentCardIndex].question}
         onClick={handleCardClick}
       />
+      {!showAnswer && (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={guess}
+            onChange={handleChange}
+            placeholder="Enter your guess"
+          />
+          <button type="submit">Submit</button>
+        </form>
+      )}
+      <button onClick={handlePreviousClick} disabled={currentCardIndex === 0}>Previous</button>
       <button onClick={handleNextClick}>Next</button>
     </div>
   );
 }
 
 export default App;
+
