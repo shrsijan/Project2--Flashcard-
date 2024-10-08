@@ -1,4 +1,4 @@
-# Web Development Project 2 - *Learn Nepali with Flashcards*
+# Web Development Project 2 + 3 - *Learn Nepali with Flashcards*
 
 Submitted by: **Sijan Shrestha**
 
