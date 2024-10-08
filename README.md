@@ -36,15 +36,11 @@ https://github.com/user-attachments/assets/2ef1a356-9f6d-41be-932e-5a8623c91efb
 
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
-
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 
