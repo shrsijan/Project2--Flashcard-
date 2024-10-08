@@ -5,6 +5,7 @@ Submitted by: **Sijan Shrestha**
 This web app: **An example of Flashcard application for learning Nepali**
 
 Time spent in Project 2: **5** hours spent in total
+
 Time spent in Project 3: **2** hours spent in total
 
 ## Required Features
